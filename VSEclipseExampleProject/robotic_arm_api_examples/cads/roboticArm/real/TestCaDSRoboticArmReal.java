@@ -15,12 +15,23 @@ public class TestCaDSRoboticArmReal {
     public static void main(String[] args) {
         try {
         	// TODO Enter the correct Address and Port to access the right robot
-            real = new CaDSRoboticArmReal("127.0.0.1", 50051);
+            real = new CaDSRoboticArmReal("172.16.1.63", 50055);
+            
+            boolean setupOk = real.init();
+            real.waitUntilInitIsFinished();
+            
+            if(setupOk){
+                System.out.println("Setup OK");
+                System.out.printf("test Started\n");
+                TimeUnit.SECONDS.sleep(3);
+            }else{
+                System.out.println("Setup failed");
+            }
+            
+            
+            
 
-            TimeUnit.SECONDS.sleep(3);
-            System.out.printf("Simulation Started\n");
-
-            while (true){
+            while (setupOk){
                 System.out.println("Move everything to 100%");
                 System.out.println();
                 real.setLeftRightPercentageTo(100);

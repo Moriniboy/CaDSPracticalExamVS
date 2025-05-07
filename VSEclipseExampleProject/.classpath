@@ -12,5 +12,6 @@
 	<classpathentry kind="lib" path="resources/libs/CaDSControlGUI.jar"/>
 	<classpathentry kind="lib" path="resources/libs/CaDSLogger.jar"/>
 	<classpathentry kind="lib" path="resources/libs/CaDSRoboticArmInterface.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ftnk1/sose25 git/JLine/jline-3.25.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
